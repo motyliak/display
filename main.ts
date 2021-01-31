@@ -1,8 +1,8 @@
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
+input.onButtonPressed(Button.A, function () {
     OLED.clear()
     OLED.writeStringNewLine("ahoj MATO")
 })
-input.onButtonPressed(Button.B, function on_button_pressed_b() {
+input.onButtonPressed(Button.B, function () {
     OLED.newLine()
     OLED.writeString("Teplota: ")
     OLED.writeNum(input.temperature())
@@ -11,6 +11,6 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     OLED.writeNum(input.lightLevel())
 })
 OLED.init(128, 64)
-basic.forever(function on_forever() {
-    
+basic.forever(function () {
+	
 })

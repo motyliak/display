@@ -1,8 +1,15 @@
 input.onButtonPressed(Button.A, function () {
     OLED.clear()
     OLED.writeStringNewLine("ahoj MUMAK")
+    OLED.drawRectangle(
+    0,
+    20,
+    40,
+    40
+    )
 })
 input.onButtonPressed(Button.B, function () {
+    OLED.clear()
     OLED.newLine()
     OLED.writeString("Teplota: ")
     OLED.writeNum(input.temperature())

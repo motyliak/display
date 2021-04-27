@@ -21,6 +21,13 @@ input.onButtonPressed(Button.B, function () {
     OLED.writeNum(input.compassHeading())
 })
 OLED.init(128, 64)
+for (let index = 0; index <= 100; index++) {
+    OLED.drawLoading(index)
+}
+for (let index = 0; index <= 3; index++) {
+    OLED.newLine()
+}
+OLED.writeStringNewLine("Stlac A alebo B")
 basic.forever(function () {
 	
 })

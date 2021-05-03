@@ -4,8 +4,8 @@ input.onButtonPressed(Button.A, function () {
     OLED.drawRectangle(
     0,
     20,
-    40,
-    40
+    50,
+    50
     )
 })
 input.onButtonPressed(Button.B, function () {
@@ -29,5 +29,12 @@ for (let index = 0; index <= 3; index++) {
 }
 OLED.writeStringNewLine("Stlac A alebo B")
 basic.forever(function () {
-	
+    basic.showLeds(`
+        # . . . .
+        # . # # .
+        . . . . .
+        . . # . .
+        . . . . .
+        `)
+    music.playTone(262, music.beat(BeatFraction.Whole))
 })
